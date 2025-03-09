@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  simplewebapp:
+    container_name: zerosploit
+    image: ahmed1399/simplewebapp
+    volumes:
+      - test:/usr/share/nginx/html
+    ports:
+      - 60000:80
+    restart: always
+volumes:
+  test:  
+    
