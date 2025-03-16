@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy
+  labels:
+    app: deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp
+        image: crccheck/hello-world
+        ports:
+        - name: myport
+          # Don't forget to look at instructions of this Image on Dockerhub before "Pull Image" to known the listen port of the Image
+          containerPort: 8000
