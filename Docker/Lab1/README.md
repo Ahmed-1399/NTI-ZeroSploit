@@ -10,7 +10,7 @@ npm init -y  ---->  create "Package.json"
 
 npm install express  ---->  Provides simplified methods for setting up a "web server" in Node.js
 
-npm app.js  ---->  Run App Locally
+node app.js  ---->  Run App Locally
 
 ```
 
